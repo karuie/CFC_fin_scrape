@@ -57,7 +57,9 @@ class CfcTestSpider(scrapy.Spider):
 
 
         # 3. Enumerates the page's hyperlinks and identifies the location of the "Privacy Policy" page with selenium
-
+        
+        
+        # add webdriver options like headless mode 
         options = Options()
         options.add_argument("--headless")
         options.add_argument("--disable-gpu")
@@ -85,6 +87,8 @@ class CfcTestSpider(scrapy.Spider):
         # we can find the Privacy Policy lication with the 'find_elements_by_xpath'
         Privacy_Policy_link = driver.find_elements_by_xpath("//*[contains(text(), 'Privacy Policy')]")
         pp_links = [elem.get_attribute('href') for elem in Privacy_Policy_link]
+        
+        # pick up the first one as it is the single link that we need
         pp_link = pp_links[0]
         pp_link_str = ''.join(map(str, pp_link))
         # Privacy_Policy_link = 'https://www.cfcunderwriting.com/en-gb/support/privacy-policy/'
