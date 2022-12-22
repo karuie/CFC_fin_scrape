@@ -1,0 +1,7 @@
+beautifulsoup4==4.11.1
+itemadapter==0.2.0
+nltk==3.6.2
+pandas==1.4.2
+Scrapy==2.5.0
+selenium==4.7.2
+webdriver_manager==3.8.5
