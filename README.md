@@ -80,3 +80,8 @@ Thirdly, you take the name of the scrape you wish to run from above and run the 
 2020-07-30 11:00:50 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
 2020-07-30 11:00:50 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
 ```
+
+
+## Debugging your spiders locally
+
+For debugging the code for one spider in this case with PyCharm as the text editor, you can set your runing environment via parameter with 'crawl cfc_test', then you can check each breakpoint by simply running main function.
